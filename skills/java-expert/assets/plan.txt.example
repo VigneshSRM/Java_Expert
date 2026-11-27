@@ -1,0 +1,47 @@
+# ---------------------------------------------------------------------------
+# plan.txt — copy to the repo root and fill in. Delete what you don't need.
+# Prose works; the KEY: lines are what make execution precise.
+# Full spec: skills/java-expert/references/plan-txt-spec.md
+# ---------------------------------------------------------------------------
+
+GOAL: <one sentence: the outcome, not the activity>
+
+STACK: java=<17|21|25|27> build=<maven|gradle> framework=<spring-boot@4.1|jakarta-ee@11|quarkus|none> packaging=<jar|war> db=<postgresql|mysql|none>
+
+# Hard limits. Recognized: no-new-deps, java=17-only, keep-public-api,
+# keep-behavior, offline, no-schema-change, war=<container>, minimal-diff
+CONSTRAINT: <constraint>
+CONSTRAINT: <constraint>
+
+# Known landmines. These prevent an agent from "helpfully" breaking things.
+RISK: <e.g. deployed on Tomcat 9 today — do not introduce jakarta.* imports>
+RISK:
+
+# ---------------------------------------------------------------------------
+# Tasks — execute in order. One unit of work each.
+# ---------------------------------------------------------------------------
+
+TASK: <imperative: what must exist when this is done>
+  FILES: <comma-separated paths, best guess>
+  AC: <observable, testable acceptance criterion>
+  AC: <second criterion, if needed>
+  TEST: <the command or test that proves it>
+
+TASK: <next task>
+  AC:
+  TEST:
+
+TASK: <next task>
+  AC:
+  TEST:
+
+# ---------------------------------------------------------------------------
+# Global definition of done. Anything written after this line is OUT OF SCOPE.
+# ---------------------------------------------------------------------------
+DONE: clean build passes; new behavior has a failing-first test; no new
+P0/P1 findings; artifact inspected if packaging=war; README updated.
+
+# ---------------------------------------------------------------------------
+# Optional / future — explicitly not part of this run
+# ---------------------------------------------------------------------------
+# - <nice to have>
